@@ -92,7 +92,7 @@ public class AWidgetsActivity extends Activity {
 
     private BaseAdapter mAdapter = new BaseAdapter() {
 
-        private OnClickListener mOnButtonClicked = new OnClickListener() {
+        private OnClickListener mOnClickListener = new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -103,8 +103,9 @@ public class AWidgetsActivity extends Activity {
                 // mAdapter.notifyDataSetChanged();
                 // mHListView.setSelection(10);
                 // mHListView.setSelectionFromLeft(10, 40);
-                mHListView.scrollTo(mHListView.getCurrentX() + 100);
+//                mHListView.scrollTo(mHListView.getCurrentX() + 100);
 
+                mAdapter.notifyDataSetChanged();
             }
         };
 
@@ -151,7 +152,7 @@ public class AWidgetsActivity extends Activity {
             Button button = (Button) retval.findViewById(R.id.clickbutton);
 
             // button.setClickable(false);
-            button.setOnClickListener(mOnButtonClicked);
+            button.setOnClickListener(mOnClickListener);
             if (position % 2 == 0) {
                 title.setText(dataObjects[position]);
             } else {

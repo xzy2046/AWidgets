@@ -71,7 +71,7 @@ import java.util.Queue;
 
 /**
  * @author zhengyang.xu
- * @version 0.9
+ * @version 0.9.1
  * @since Mar 27, 2012 1:11:55 PM
  * @project AWidgets
  */
@@ -481,6 +481,13 @@ public class AHorizontalListView extends AdapterView<ListAdapter> {
             return;
         }
 
+        if (changed) {
+            int oldCurrentX = mCurrentX;
+            initView();
+            removeAllViewsInLayout();
+            mNextX = oldCurrentX;
+        }
+
         if (mDataChanged) {
             int oldCurrentX = mCurrentX;
             initView();
@@ -543,7 +550,7 @@ public class AHorizontalListView extends AdapterView<ListAdapter> {
                 }
             }, 20);
         }
-        super.onLayout(changed, left, top, right, bottom);
+//        super.onLayout(changed, left, top, right, bottom);
     }
 
     private void fillList(final int dx) {
