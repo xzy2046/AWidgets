@@ -447,7 +447,7 @@ public class AHorizontalListView extends AdapterView<ListAdapter> {
     @Override
     protected int computeHorizontalScrollRange() {
         // TODO
-        if (mAdapter == null ||mAdapter.getCount() == 0) {
+        if (mAdapter == null || mAdapter.getCount() == 0) {
             return 0;
         }
         View child = getChildAt(0);
@@ -481,20 +481,21 @@ public class AHorizontalListView extends AdapterView<ListAdapter> {
             return;
         }
 
-        if (changed) {
-            int oldCurrentX = mCurrentX;
-            initView();
-            removeAllViewsInLayout();
-            mNextX = oldCurrentX;
-        }
-
-        if (mDataChanged) {
+        if (changed || mDataChanged) {
             int oldCurrentX = mCurrentX;
             initView();
             removeAllViewsInLayout();
             mNextX = oldCurrentX;
             mDataChanged = false;
         }
+
+/*        if (mDataChanged) {
+            int oldCurrentX = mCurrentX;
+            initView();
+            removeAllViewsInLayout();
+            mNextX = oldCurrentX;
+            mDataChanged = false;
+        }*/
 
         if (mScroller.computeScrollOffset()) {
             int scrollx = mScroller.getCurrX();
@@ -550,7 +551,7 @@ public class AHorizontalListView extends AdapterView<ListAdapter> {
                 }
             }, 20);
         }
-//        super.onLayout(changed, left, top, right, bottom);
+        // super.onLayout(changed, left, top, right, bottom);
     }
 
     private void fillList(final int dx) {
