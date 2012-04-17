@@ -6,4 +6,5 @@
 	<string name="preference">Welcome to AWidgets!</string>
 	<string name="horizontal_listview_title">Horizontal ListView</string>
 	<string name="animation_listview_title">Animation ListView</string>
+	<string name="dragable_gridview_title">Dragable GridView</string>
 </resources>

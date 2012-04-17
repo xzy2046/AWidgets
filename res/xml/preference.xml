@@ -19,4 +19,13 @@
             android:targetClass="xzy.android.awidgets.AnimationListViewActivity"
             android:targetPackage="xzy.android.awidgets" />
     </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/dragable_gridview_title" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="xzy.android.awidgets.DragableGridViewActivity"
+            android:targetPackage="xzy.android.awidgets" />
+    </PreferenceScreen>
+
 </PreferenceScreen>
