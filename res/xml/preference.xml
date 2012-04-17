@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="parent"
+    android:title="@string/preference" >
+
+    <PreferenceScreen
+        android:title="@string/horizontal_listview_title" >
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="xzy.android.awidgets.AWidgetsActivity"
+            android:targetPackage="xzy.android.awidgets" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

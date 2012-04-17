@@ -87,7 +87,7 @@ public class AWidgetsActivity extends Activity {
             "Text #9", "Text #10", "Text #11", "Text #12", "Text #13", "Text #14", "Text #15",
             "Text #16", "Text #17", "Text #18", "Text #19", "Text #20", "Text #21", "Text #22",
             "Text #23", "Text #24", "Text #25", "Text #26", "Text #27", "Text #28", "Text #29",
-            "Text #30"
+            "Text #30", "Text 31", "Text 32", "Text 33", "Text 34",
     };
 
     private BaseAdapter mAdapter = new BaseAdapter() {
