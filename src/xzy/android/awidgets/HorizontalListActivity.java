@@ -42,7 +42,7 @@ import android.widget.TextView;
  * @since Mar 27, 2012 1:11:30 PM
  * @project AWidgets
  */
-public class AWidgetsActivity extends Activity {
+public class HorizontalListActivity extends Activity {
 
     private AHorizontalListView mHListView;
 
@@ -96,7 +96,7 @@ public class AWidgetsActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(AWidgetsActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(HorizontalListActivity.this);
                 builder.setMessage("hello from " + v);
                 builder.setPositiveButton("Cool", null);
                 builder.show();
@@ -127,7 +127,7 @@ public class AWidgetsActivity extends Activity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             Log.i("xzy", "position: " + position);
-            View retval = LayoutInflater.from(AWidgetsActivity.this).inflate(R.layout.viewitem,
+            View retval = LayoutInflater.from(HorizontalListActivity.this).inflate(R.layout.viewitem,
                     null);
             TextView title = (TextView) retval.findViewById(R.id.title);
             title.setOnTouchListener(new View.OnTouchListener() {

@@ -18,12 +18,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AWidgetsActivity" >
+            android:name=".HorizontalListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" ></action>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
+        </activity>
+        <activity
+            android:name=".AnimationListViewActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
